@@ -1,0 +1,4 @@
+sqs.region: us-east-1
+sqs.incoming.queue: alineGitCommitHook-vCloud
+jms.outgoing.queue: alineGitCommitHook-vCloud
+jms.broker.url: "tcp://10.165.0.18:61616"

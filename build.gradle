@@ -1,0 +1,39 @@
+group 'com.devfactory.sqstojms'
+version '1.0'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'sqstojms.jar'
+    version =  '1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter"
+    compile "com.amazonaws:aws-java-sdk:1.11.77"
+    compile "org.springframework:spring-jms"
+    compile "com.amazonaws:amazon-sqs-java-messaging-lib:1.0.0"
+    compile "org.slf4j:slf4j-api:1.7.22"
+    compile "org.apache.activemq:activemq-client"
+
+    testCompile "junit:junit:4.11"
+}
