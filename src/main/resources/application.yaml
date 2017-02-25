@@ -1,4 +1,9 @@
-sqs.region: us-east-1
-sqs.incoming.queue: alineGitCommitHook-vCloud
-jms.outgoing.queue: alineGitCommitHook-vCloud
-jms.broker.url: "tcp://10.165.0.18:61616"
+sqs:
+  region: us-east-1
+  queue: alineGitCommitHook-vCloud
+jms:
+  broker_url: "tcp://10.165.0.18:61616"
+  queue: alineGitCommitHook-vCloud
+logging:
+  level:
+    com.devfactory.sqstojms: debug

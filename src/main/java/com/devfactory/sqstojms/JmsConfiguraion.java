@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JmsConfiguraion {
 
-    @Value("${jms.broker.url}")
+    @Value("${jms.broker_url}")
     private String brokerUrl;
 
     @Bean
